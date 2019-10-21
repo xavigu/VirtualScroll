@@ -25,3 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Info App
+
+To use the funcionalities of this app, I run `npm install @angular/cdk@7.3.7` because with the last version of angular/cdk didnt work

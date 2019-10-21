@@ -1,0 +1,11 @@
+<h1>Virtual Scroll</h1>
+<hr>
+
+<cdk-virtual-scroll-viewport itemSize = "50" class="list-container list-group"> <!-- Se debe poner el tamaño en pixeles de cada item, tiene altura de 0 por defecto el contenedor de los items por lo que hay que añadirle una clase para ponerle height-->
+
+  <div *cdkVirtualFor="let persona of personas; let i = index; let contador=count" class="list-group-item"> <!-- Igual que un *ngFor con el cdkvirtual -->
+    Item {{i}} / {{contador}}
+  </div>
+
+</cdk-virtual-scroll-viewport>
+
