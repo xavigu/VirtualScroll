@@ -1,9 +1,29 @@
 <h1>Virtual Scroll</h1>
 <hr>
 
+<div class="row" style="text-align: center;">
+  <div class="col">
+    <button (click)="goEnd()" class="btn btn-primary">
+      Go to the end
+    </button>
+  </div>
+  <div class="col">
+    <button (click)="goMiddle()" class="btn btn-secondary">
+      Go to the middle
+    </button>
+  </div>
+  <div class="col">
+    <button (click)="goStart()" class="btn btn-warning">
+      Go to the start
+    </button>
+  </div>
+</div>
+<br>
+<hr>
+
 <cdk-virtual-scroll-viewport itemSize = "50" class="list-container list-group"> <!-- Se debe poner el tamaño en pixeles de cada item, tiene altura de 0 por defecto el contenedor de los items por lo que hay que añadirle una clase para ponerle height-->
 
-  <div *cdkVirtualFor="let persona of personas; let i = index; let contador=count" class="list-group-item"> <!-- Igual que un *ngFor con el cdkvirtual -->
+  <div *cdkVirtualFor="let persona of personas; let i = index; let contador=count" class="animated fadeInRight delay-1s list-group-item"> <!-- Igual que un *ngFor con el cdkvirtual -->
     Item {{i}} / {{contador}}
   </div>
 
