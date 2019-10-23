@@ -1,0 +1,9 @@
+<h1>Paises</h1>
+<hr>
+                       <!-- Directiva/Atributo para que solo se pueda hacer drag & drop dentro del padre -->
+<ul class="list-group" cdkDropList
+    (cdkDropListDropped)="drop($event)"> <!-- Cuando sueltas el <li> en otra parte del <ul> llama a la función drop que recoge este evento -->
+  <li class="list-group-item" *ngFor="let pais of paises" cdkDrag> <!-- Directiva para poder hacer drag&drop de estos elemento <li> -->
+      {{pais.name}} <img class="pais-image" [src]="pais.flag" [alt]="pais.name">
+  </li>
+</ul>
